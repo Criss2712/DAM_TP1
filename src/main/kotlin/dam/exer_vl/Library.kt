@@ -1,22 +1,19 @@
 package org.example.dam.exer_vl
 
 class Library(val name: String) {
-    // Lista mutável para armazenar os livros
     private val books = mutableListOf<Book>()
 
-    // Métodos a implementar:
     fun addBook(book: Book) {
-        // Adiciona um livro à lista
         books.add(book)
     }
 
     fun borrowBook(title: String) {
-        // Procura um livro pelo título e diminui as cópias disponíveis
         val book = books.find { it.title.equals(title, ignoreCase = true) }
         if (book != null) {
             if (book.availableCopies > 0) {
-                book.availableCopies--
-                println("Successfully borrowed '$title'. Copies remaining: ${book.availableCopies}")
+                val remaining = book.availableCopies - 1
+                println("Successfully borrowed '$title'. Copies remaining: $remaining ")
+                book.availableCopies = remaining
             } else {
                 println("Sorry, no copies available for '$title'")
             }
@@ -37,7 +34,7 @@ class Library(val name: String) {
 
     fun showBooks() {
         println("\n--- Library Catalog ---")
-        books.forEach { println(it) } // Chama toString() de cada livro
+        books.forEach { println(it) }
     }
 
     fun searchByAuthor(author: String) {
@@ -47,9 +44,7 @@ class Library(val name: String) {
         } else {
             println("Books by $author:")
             results.forEach {
-                println("- ${it.title} (${it.publicationYear}, ${it.availableCopies} copies available)")
-                // Atenção: it.publicationYear é a string (Classic/Modern/Contemporary) – é isso que queremos?
-                // No exemplo do enunciado aparece "Classic", "Modern", etc. Portanto sim.
+                println("- ${it.title} (${it.bookEra}, ${it.availableCopies} copies available)")
             }
         }
     }

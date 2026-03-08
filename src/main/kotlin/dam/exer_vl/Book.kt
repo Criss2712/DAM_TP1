@@ -27,6 +27,6 @@ abstract class Book (val title: String, val author: String, val publicationYear 
     abstract fun getStorageInfo(): String
 
     override fun toString(): String {
-        return "Title: $title, Author: $author, Era: $publicationYear, Available: $availableCopies copies\nStorage: ${getStorageInfo()}"
+        return "Title: $title, Author: $author, Era: $bookEra, Available: $availableCopies copies\nStorage: ${getStorageInfo()}"
     }
 }
