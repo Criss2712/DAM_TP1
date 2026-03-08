@@ -19,6 +19,9 @@ Primeiro são apresentados alguns exercícios para os alunos interagirem com Kot
 ambiente do Android Studio, e por fim retorna-se à linguagem Kotlin mas desta vez com a introdução da programação orientada
 a objetos.
 
+Toda a interação realizada com o IDE Android Studio não se encontra neste repositório, pois não foram dadas indicações 
+para o incluir.
+
 ## 2. System Overview
 <!-- High-level description of the solution, main features, and use cases. -->
 
@@ -31,7 +34,7 @@ A estrutura do projeto segue a organização sugerida no enunciado do trabalho p
 - `dam.exer_1`: Pacote que contém o Exercício 1: Quadrados Perfeitos
 - `dam.exer_2`: Pacote que contém o Exercício 2: Calculadora em Consola
 - `dam.exer_3`: Pacote que contém o Exercício 3: Geração de uma Sequência de Saltos de uma bola 
-- `dam.virtual_library`: Pacote que contém o Exercício 6: Sistema de Biblioteca Virtual
+- `dam.exer_vl`: Pacote que contém o Exercício 6: Sistema de Biblioteca Virtual
 
 ## 4. Implementation
 <!-- Implementation details: main modules, components, algorithms, and relevant code
