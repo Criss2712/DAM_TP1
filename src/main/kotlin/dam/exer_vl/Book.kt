@@ -1,7 +1,7 @@
 package org.example.dam.exer_vl
 
 abstract class Book (val title: String, val author: String, val publicationYear : Int, availableCopies : Int){
-
+    // getter personalizado recorrendo a uma nova variável para ser possível manter o valor da variável publicationYear
     val bookEra: String
         get() {
             return when {
@@ -11,11 +11,12 @@ abstract class Book (val title: String, val author: String, val publicationYear 
             }
         }
 
+    // setter com verificação de valores nulos (field representa o valor armazenado)
     var availableCopies: Int = availableCopies
         set(value) {
             val newValue = if (value < 0) 0 else value
             if (newValue == 0 && field > 0) {
-                println("Warning: Book is now out of stock! ") // ou println
+                println("Warning: Book is now out of stock! ")
             }
             field = newValue
         }
