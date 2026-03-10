@@ -3,9 +3,19 @@ package org.example.dam.exer_vl
 class Library(val name: String) {
     private val books = mutableListOf<Book>()
 
+    // companion object partilhado por todas as instâncias "Library"
+    companion object {
+        private var totalBooksAdded = 0
+
+        fun getTotalBooksCreated(): Int {
+            return totalBooksAdded
+        }
+    }
+
     // função para adicionar livros
     fun addBook(book: Book) {
         books.add(book)
+        totalBooksAdded++
     }
 
     // função para requisitar livros
