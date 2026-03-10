@@ -1,11 +1,11 @@
-# Assignment 1 — Hello Kotlin. Hello Android World!
+# Assignment 1 — Hello Kotlin.
 <!-- Replace X and Title -->
 
 Course: Desenvolvimento de Aplicações Móveis (DAM)
 
 Student(s): Renata Cristina Conceição Góis
 
-Date: 
+Date: 10/03/2026
 
 Repository URL: https://github.com/Criss2712/DAM_TP1
 
@@ -14,9 +14,9 @@ Repository URL: https://github.com/Criss2712/DAM_TP1
 <!-- Purpose of the assignment, problem description, and objectives. -->
 
 Este primeiro trabalho prático teve como objetivo dar a introduzir aos alunos a nova linguagem de programação Kotlin e ao
-desenvolvimento em Android com base no IDE Android Studio. O trabalho encontra-se dividido em diferentes secções.
+desenvolvimento em Android no IDE Android Studio. O trabalho encontra-se dividido em diferentes secções.
 Primeiro são apresentados alguns exercícios para os alunos interagirem com Kotlin, de seguida procede-se à preparação do
-ambiente do Android Studio, e por fim retorna-se à linguagem Kotlin mas desta vez com a introdução da programação orientada
+ambiente do Android Studio, e por fim retorna-se à linguagem Kotlin com a introdução da programação orientada
 a objetos.
 
 Neste repositório apresentar-se-à apenas os exercícios dedicados ao Kotlin, tendo cada aplicação Android o seu próprio 
@@ -30,13 +30,13 @@ repositório.
 Programa em Kotlin que cria e inicializa um array com os primeiros 50 quadrados perfeitos (1² a 50²) utilizando três abordagens diferentes: construtor `IntArray`, range com `map()`, e construtor `Array`.
 
 **Funcionalidades Principais:**
-- Geração dinâmica de quadrados perfeitos
-- Três implementações distintas para demonstrar diferentes conceitos da linguagem
-- Comparação entre arrays primitivos (`IntArray`) e arrays de objetos (`Array<Int>`)
+- Geração dinâmica de quadrados perfeitos.
+- Três implementações distintas para demonstrar diferentes conceitos da linguagem.
+- Comparação entre arrays primitivos (`IntArray`) e arrays de objetos (`Array<Int>`).
 
 **Casos de Uso:**
-- **Demonstração de construtores:** O programador pode observar como inicializar arrays com lambdas
-- **Demonstração de programação funcional:** Uso de `range` e `map` para transformação de dados
+- **Demonstração de construtores:** O programador pode observar como inicializar arrays com lambdas.
+- **Demonstração de programação funcional:** Uso de `range` e `map` para transformação de dados.
 
 ### Exercício 2: Calculadora em Consola
 **Descrição Geral:**  
@@ -44,11 +44,11 @@ Calculadora interativa em consola que suporta operações aritméticas, booleana
 O programa demonstra o uso de `when`, tratamento de exceções, e formatação de strings.
 
 **Funcionalidades Principais:**
-- Operações aritméticas: adição, subtração, multiplicação, divisão
-- Operações booleanas: AND (&&), OR (||), NOT (!)
-- Operações binárias: left shift (shl), right shift (shr)
-- Validação de input com tratamento de exceções
-- Apresentação de resultados em decimal, hexadecimal e booleano
+- Operações aritméticas: adição, subtração, multiplicação, divisão.
+- Operações booleanas: AND (&&), OR (||), NOT (!).
+- Operações binárias: left shift (shl), right shift (shr).
+- Validação de input com tratamento de exceções.
+- Apresentação de resultados em decimal, hexadecimal e booleano.
 
 **Casos de Uso:**
 - **Cálculo aritmético:** Utilizador escolhe uma operação (+, -, *, /), insere dois números e obtém o resultado.
@@ -56,10 +56,26 @@ O programa demonstra o uso de `when`, tratamento de exceções, e formatação d
 - **Operação binária:** Utilizador escolhe shl ou shr, insere dois inteiros e obtém o resultado da deslocação de bits.
 - **Tratamento de erros:** Se o utilizador inserir texto em vez de números, o programa pede novamente o input.
 
+### Exercício 3 - Sequência de Saltos
+**Descrição Geral:**  
+Programa que modela as alturas de uma bola que salta, começando a 100 metros e perdendo 60% de altura a cada ressalto. 
+Utiliza `generateSequence` para gerar a sequência infinita, `filter` para manter apenas alturas >= 1 metro, 
+`take` para os primeiros 15 valores, e imprime os resultados arredondados a 2 casas decimais.
+
+**Funcionalidades Principais:**
+- Geração de sequência infinita com `generateSequence`.
+- Filtragem de elementos com `filter`.
+- Limitação de resultados com `take`.
+- Formatação numérica com `String.format`.
+
+**Casos de Uso:**
+- **Simulação de fenómeno físico:** Calcular as alturas dos primeiros 15 ressaltos de uma bola.
+- **Demonstração de sequências:** Mostrar como trabalhar com sequências infinitas de forma eficiente.
+
 
 ### Exercício 6: Biblioteca Virtual 
 **Descrição Geral:**  
-Sistema de gestão de biblioteca virtual desenvolvido em Kotlin, aplicando conceitos de programação orientada a objetos: 
+Sistema de gestão de biblioteca virtual desenvolvido em Kotlin, aplicando os conceitos de programação orientada a objetos: 
 classes abstratas, herança, polimorfismo, encapsulamento, e métodos abstratos.
 
 **Funcionalidades Principais:**
@@ -87,7 +103,7 @@ A estrutura do projeto segue a organização sugerida no enunciado do trabalho p
 
 - `dam.exer_1`: Pacote que contém o Exercício 1: Quadrados Perfeitos;
 - `dam.exer_2`: Pacote que contém o Exercício 2: Calculadora em Consola;
-- `dam.exer_3`: Pacote que contém o Exercício 3: Geração de uma Sequência de Saltos de uma bola (não foi implementado); 
+- `dam.exer_3`: Pacote que contém o Exercício 3: Geração de uma Sequência de Saltos de uma bola; 
 - `dam.exer_vl`: Pacote que contém o Exercício 6: Sistema de Biblioteca Virtual;
 
 
@@ -110,12 +126,11 @@ Documentação Kotlin:
 
 
 ### Exercício 2: Calculadora em Consola
-Este exercício, ao contrário do anterior, revelou-se ser mais extenso. Para a realização de uma calculadora
-em consola foram implementados vários menus interligados que apresentam ao utilizador as várias opções que podem ser realizadas
-nesta calculadora. 
+Para a realização de uma calculadora em consola foram implementados vários menus interligados que apresentam ao 
+utilizador as várias opções que podem ser realizadas nesta calculadora. 
 
-Toda a calculadora se encontra dentro de um ciclo `while(true)` principal para que seja possível, após a realização de uma
-operação, voltar ao menu principal e, ou voltar a escolher uma nova operação, ou sair da calculadora.
+A calculadora foi implementada dentro de ciclo `while(true)` principal, para que após a realização de uma
+operação, a aplicação volte ao menu principal para, ou voltar a escolher uma nova operação, ou sair da calculadora.
 
 Dentro deste ciclo principal, cada menu posteriormente apresentado encontra-se dentro do seu próprio ciclo `while(true)`
 com o objetivo de controlar inputs inválidos, ou seja, se for introduzido algo inválido, o utilizador é informado e o menu
@@ -129,11 +144,16 @@ escolhido, é realizada a operação correspondente.
 Documentação Kotlin:
 - `Control Flow:` https://kotlinlang.org/docs/control-flow.html
 
-<!--### Exercício 3: Sequência de Saltos-->
+### Exercício 3: Sequência de Saltos
+Neste exercício foi gerada uma sequência com um valor inicial de 100 e aplicadas as funções
+`.take(15)`, `.filter()`, `.toList()`, à sequência nesta ordem, para obter o desejado.
+
+Documentação Kotlin:
+- `generateSequence:` https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.sequences/generate-sequence.html
+
 
 ### Exercício 6: Sistema de Biblioteca Virtual
-Neste exercício introduz-se a programação orientada a objetos na linguagem Kotlin, ao ser pedido para se implementar
-uma biblioteca virtual com as seguintes classes:
+Classes Implementadas:
 
 - `Book`: Classe abstrata com as suas próprias propriedades referentes aos atributos normais de um livro (título, autor,
 ano publicação, etc.);
@@ -141,6 +161,7 @@ ano publicação, etc.);
 do método abstrato `getStorageInfo()` declarado na classe `Book`;
 - `Library`: Classe que funciona como "manager" que contém os métodos para adicionar, requisitar, devolver, apresentar e
 procurar livros;
+- `LibraryMember`: DataClass que representa um membro da biblioteca;
 - `Main.kt`: Ficheiro kotlin que contém a função main em que é executada a biblioteca virtual. São criados novos objetos
 dos vários tipos de livros (digital e physical), e são testadas algumas das funções. O código presente neste ficheiro foi 
 fornecido aos alunos, estando disponível no enunciado do trabalho.
@@ -184,7 +205,9 @@ dos menus quando era introduzido um input inválido.
 Após a realização destes testes, conseguiu-se chegar a uma calculadora funcional que não bloqueia quando é introduzido um
 valor errado ou fora do esperado.
 
-<!-- ### Exercício 3: Sequência de Saltos -->
+### Exercício 3: Sequência de Saltos
+Durante a implementação deste exercício foram feitos testes para observar se a sequência era
+apresentada corretamente na consola.
 
 ### Exercício 6: Sistema de Biblioteca Virtual
 Para a realização deste exercício foi fornecido um output esperado, então após criadas as classes bases, foram sendo realizados
@@ -216,16 +239,18 @@ vários commits até se realizar o final, indicando que esse exercício se encon
 <!-- Main challenges, mistakes, insights, and skills acquired during the assignment.
     -->
 Tendo sido a primeira vez a utilizar o Git para este propósito, a criação do primeiro repositório e da ligação com o IDE
-IntelliJ foi um dos primeiros desafios. Tendo sido também a primeira vez a lidar com a linguagem de programação Kotlin, 
-a sua documentação não se revelou ser muito intuitiva de navegar nem muito esclarecedora nos seus conteúdos, apresentando
-muito pouca informação em relação a inúmeros conceitos, o que levou à não realização de alguns exercícios e ao recurso de
-IA para conseguir perceber e fazer certas partes do trabalho.
+IntelliJ foi um dos primeiros desafios. 
+
+Tendo sido também a primeira vez a lidar com a linguagem de programação Kotlin, a sua documentação não se revelou ser 
+intuitiva de navegar nem muito esclarecedora nos seus conteúdos, apresentando pouca informação de inúmeros conceitos, 
+o que levou ao recurso de IA para conseguir perceber e fazer certas partes do trabalho.
 
 ## 14. Future Improvements
 <!-- Possible extensions, optimizations, or features that could be added in future work. -->
 
-Os possíveis melhoramentos recaem sobre um melhor entendimento da linguagem Kotlin para conseguir estruturar a implementação
-dos exercícios de uma forma mais modular e não tão extensa e repetitiva.
+Os possíveis melhoramentos recaem sobre um melhor entendimento da linguagem Kotlin, não só para conseguir estruturar 
+a implementação dos exercícios de uma forma mais modular e não tão extensa e repetitiva, mas também ter menos dificuldades
+na realização dos mesmos.
 
 ---
 
@@ -233,8 +258,9 @@ dos exercícios de uma forma mais modular e não tão extensa e repetitiva.
 <!-- List all AI tools used (e.g., ChatGPT, Copilot, etc.), how they were used, and
     confirmation that you remain responsible for all content. -->
 
-- **LLM Utilizado:** DeepSeek
-- **Como foi Utilizada:** Exclusivamente para ajudar na introdução à linguagem Kotlin e a dar bases de como poderia avançar
-nos exercícios
-- **Responsabilidade:** Aluna Renata Góis (A51038), sou totalmente responsável pelo conteúdo apresentado e submetido neste
-trabalho
+- **LLM Utilizado:** DeepSeek.
+- **Como foi Utilizado:** Exclusivamente para ajudar na introdução à linguagem Kotlin, na compreensão de certas funções
+necessárias para a realização dos exercícios, em conjunto com a documentação de Kotlin, e para a realização de algumas
+secções do presente relatório.
+- **Responsabilidade:** Eu, aluna Renata Góis (A51038), sou totalmente responsável pelo conteúdo apresentado e submetido neste
+trabalho.
